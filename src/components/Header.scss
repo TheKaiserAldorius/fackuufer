@@ -1,0 +1,41 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; // ВАЖНО
+    padding: 0 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    z-index: 999;
+  
+    .header__profile {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      color: #000;
+    }
+  
+    .header__balance {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+  
+      .balance-button {
+        display: flex;
+        align-items: center;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #000;
+        
+        .plus-icon {
+          margin-left: 2px;
+        }
+      }
+    }
+  }
+  
