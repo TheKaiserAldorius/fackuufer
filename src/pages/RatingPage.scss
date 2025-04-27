@@ -1,0 +1,175 @@
+.rating-page {
+    padding: 86px 16px 76px; /* учесть header и bottom-nav */
+    background-color: #1A1F26;
+    min-height: 100vh;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: 'SF Pro Text', sans-serif;
+  }
+  
+  /* Вкладки */
+  .rating-tabs {
+    display: flex;
+    background: #2B313A;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    height: 32px;
+  
+    button {
+      flex: 1;
+      background: none;
+      border: none;
+      color: #A5A5A5;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+  
+      &.active {
+        color: #fff;
+        background: #69AFFF;
+      }
+    }
+  }
+  
+  /* Топ-блок */
+  .top-section {
+    .first-second {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 8px;
+  
+      .big-slot {
+        flex: 1;
+        height: 100px;
+        background: #2B313A;
+        border-radius: 8px;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+  
+        .position {
+          position: absolute;
+          top: 8px;
+          left: 8px;
+          font-size: 12px;
+          font-weight: 600;
+        }
+      }
+    }
+  
+    .others {
+      display: flex;
+      gap: 8px;
+  
+      .small-slot {
+        flex: 1;
+        height: 60px;
+        background: #2B313A;
+        border-radius: 8px;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+  
+        .position {
+          position: absolute;
+          top: 6px;
+          left: 6px;
+          font-size: 10px;
+          font-weight: 600;
+        }
+      }
+  
+      .third {
+        flex: 1;
+        height: 60px;
+        background: #2B313A;
+        border-radius: 8px;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+  
+        .position {
+          position: absolute;
+          top: 6px;
+          left: 6px;
+          font-size: 12px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  
+  /* Текущий пользователь */
+  .current-user {
+    display: flex;
+    align-items: center;
+    background: #2B313A;
+    border-radius: 8px;
+    padding: 8px;
+    margin: 16px 0;
+  
+    .avatar-placeholder {
+      width: 40px;
+      height: 40px;
+      background: #444;
+      border-radius: 50%;
+      margin-right: 12px;
+    }
+  
+    .current-info {
+      .name {
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .rank {
+        font-size: 12px;
+        color: #A5A5A5;
+      }
+    }
+  }
+  
+  /* Список лидеров */
+  .leaders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  
+    .leader-row {
+      display: flex;
+      align-items: center;
+      background: #2B313A;
+      border-radius: 8px;
+      padding: 8px;
+  
+      .rank-badge {
+        font-size: 12px;
+        font-weight: 600;
+        width: 32px;
+        color: #69AFFF;
+      }
+  
+      .leader-avatar {
+        width: 32px;
+        height: 32px;
+        background: #444;
+        border-radius: 50%;
+        margin-right: 12px;
+      }
+  
+      .leader-info {
+        .name {
+          font-size: 14px;
+          font-weight: 500;
+        }
+        .stars {
+          font-size: 12px;
+          color: #A5A5A5;
+        }
+      }
+    }
+  }
+  

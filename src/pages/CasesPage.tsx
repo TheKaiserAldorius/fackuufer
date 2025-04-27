@@ -1,38 +1,34 @@
-import React from 'react';
 import './CasesPage.scss';
 
-// Импортируем изображения кейсов
-import CakeCaseImg    from '../assets/case/CakeCase.png';
-import EggCaseImg     from '../assets/case/EggCase.png';
-import TopHeadCaseImg from '../assets/case/TopHeadCase.png';
-import SkeletonCaseImg from '../assets/case/SceletonCase.png';
-import JackboxCaseImg from '../assets/case/JackboxCase.png';
-import RingCaseImg    from '../assets/case/RingCase.png';
+// Импорт изображений кейсов
+import CakeCaseImg     from '../assets/CaseItems/CakeCase.png';
+import EggCaseImg      from '../assets/CaseItems/EggCase.png';
+import TopHeadCaseImg  from '../assets/CaseItems/TopHeadCase.png';
+import SkeletonCaseImg from '../assets/CaseItems/SceletonCase.png';
+import JackboxCaseImg  from '../assets/CaseItems/JackboxCase.png';
+import RingCaseImg     from '../assets/CaseItems/RingCase.png';
 
 // Импорт иконки звёздочки
 import starIcon from '../assets/buttonsicons/StarTg.png';
 
 const casesList = [
-  { title: 'Easter Case',    img: EggCaseImg,      price: 30, new: false },
-  { title: 'Jack Case',      img: JackboxCaseImg,  price: 30, new: true  },
-  { title: 'Cake Case',      img: CakeCaseImg,     price: 30, new: true  },
-  { title: 'Top Hat Case',   img: TopHeadCaseImg,  price: 60, new: true  },
-  { title: 'Skeleton Case',  img: SkeletonCaseImg, price: 30, new: false },
-  { title: 'Ring Case',      img: RingCaseImg,     price: 30, new: false },
+  { img: EggCaseImg,      price: 30 },
+  { img: JackboxCaseImg,  price: 30 },
+  { img: CakeCaseImg,     price: 30 },
+  { img: TopHeadCaseImg,  price: 60 },
+  { img: SkeletonCaseImg, price: 30 },
+  { img: RingCaseImg,     price: 30 },
 ];
 
 const CasesPage = () => (
   <div className="cases-page">
     <div className="cases-grid">
       {casesList.map((c, i) => (
-        <div key={i} className="case-card">
-          <div className="case-header">
-            <span className="case-title">{c.title}</span>
-            {c.new && <span className="case-badge">Новый</span>}
-          </div>
-          <div className="case-image-wrapper">
-            <img src={c.img} alt={c.title} className="case-image" />
-          </div>
+        <div
+          key={i}
+          className="case-card"
+          style={{ backgroundImage: `url(${c.img})` }}
+        >
           <div className="case-footer">
             <img src={starIcon} alt="звезда" className="case-star-icon" />
             <span className="case-price">{c.price}</span>

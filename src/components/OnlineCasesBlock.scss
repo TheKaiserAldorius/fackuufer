@@ -4,7 +4,7 @@
   background-color: #20272F;
   padding: 8px 12px;
   border-radius: 10px;
-  margin-top: 70px; /* ДОБАВИЛ ОТСТУП от хедера вниз */
+  margin-top: 60px; /* ДОБАВИЛ ОТСТУП от хедера вниз */
 }
 
 .online-block {
@@ -35,21 +35,42 @@
   align-items: center;
   gap: 6px;
   overflow-x: auto;
+  flex-wrap: nowrap;
 
-  .case-wrapper {
-    background-color: #1A1F26;
-    border-radius: 8px;
-    padding: 5px;
-    min-width: 42px;
-    height: 42px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .case-image {
-      width: 28px;
-      height: 28px;
-      object-fit: contain;
-    }
+  /* Скрыть скроллбар в WebKit-браузерах (Chrome, Safari) */
+  &::-webkit-scrollbar {
+    display: none;
   }
+
+  /* Скрыть скроллбар в Firefox */
+  scrollbar-width: none;
+
+  /* Скрыть скроллбар в IE и Edge */
+  -ms-overflow-style: none;
+}
+.case-wrapper {
+  flex: 0 0 auto;    /* Не растягивать и не сжимать блок */
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+
+  .case-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+/* Стили скролл-бара (опционально) */
+.cases-container::-webkit-scrollbar {
+  height: 4px;
+}
+.cases-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
 }

@@ -1,46 +1,51 @@
 import React from 'react';
-import './CasesPage.scss';
+import './OnlineCasesBlock.scss';
 
-// Импортируем изображения кейсов
-import CakeCaseImg    from '../assets/case/CakeCase.png';
-import EggCaseImg     from '../assets/case/EggCase.png';
-import TopHeadCaseImg from '../assets/case/TopHeadCase.png';
-import SkeletonCaseImg from '../assets/case/SceletonCase.png';
-import JackboxCaseImg from '../assets/case/JackboxCase.png';
-import RingCaseImg    from '../assets/case/RingCase.png';
+// Импортируем изображения
+import cakeImage from '../assets/iconitems/cake.png';
+import clownboxImage from '../assets/iconitems/clownbox.png';
+import eggImage from '../assets/iconitems/egg.png';
+import ringImage from '../assets/iconitems/ring.png';
+import topheadImage from '../assets/iconitems/tophead.png';
 
-// Импорт иконки звёздочки
-import starIcon from '../assets/buttonsicons/StarTg.png';
+// Массив с кейсами (для примера)
+const caseImages = [
+  eggImage,
+  ringImage,
+  cakeImage,
+  clownboxImage,
+  topheadImage,
+  cakeImage,
+  clownboxImage,
+  cakeImage,
+  clownboxImage,
+  topheadImage,
+  cakeImage,
+  clownboxImage,
 
-const casesList = [
-  { title: 'Easter Case',    img: EggCaseImg,      price: 30, new: false },
-  { title: 'Jack Case',      img: JackboxCaseImg,  price: 30, new: true  },
-  { title: 'Cake Case',      img: CakeCaseImg,     price: 30, new: true  },
-  { title: 'Top Hat Case',   img: TopHeadCaseImg,  price: 60, new: true  },
-  { title: 'Skeleton Case',  img: SkeletonCaseImg, price: 30, new: false },
-  { title: 'Ring Case',      img: RingCaseImg,     price: 30, new: false },
+  ringImage,
+  topheadImage,
+  cakeImage,
+  cakeImage,
 ];
 
-const CasesPage = () => (
-  <div className="cases-page">
-    <div className="cases-grid">
-      {casesList.map((c, i) => (
-        <div key={i} className="case-card">
-          <div className="case-header">
-            <span className="case-title">{c.title}</span>
-            {c.new && <span className="case-badge">Новый</span>}
-          </div>
-          <div className="case-image-wrapper">
-            <img src={c.img} alt={c.title} className="case-image" />
-          </div>
-          <div className="case-footer">
-            <img src={starIcon} alt="звезда" className="case-star-icon" />
-            <span className="case-price">{c.price}</span>
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
-);
+const OnlineCasesBlock = () => {
+  return (
+    <div className="online-cases-block">
+      <div className="online-block">
+        <div className="online-number">3554</div> {/* Онлайн количество */}
+        <div className="online-text">Онлайн</div>
+      </div>
 
-export default CasesPage;
+      <div className="cases-container">
+        {caseImages.map((image, index) => (
+          <div className="case-wrapper" key={index}>
+            <img src={image} alt={`case ${index}`} className="case-image" />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default OnlineCasesBlock;

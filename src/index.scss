@@ -9,17 +9,17 @@ body, html, #root {
 }
 
 .app {
-  padding-bottom: 60px; // Отступ под футер
+  padding-bottom: 30px; // Отступ под футер
   min-height: 60%;
 }
 
 .page {
   padding: 20px;
-  padding-bottom: 80px; // Чтоб текст не налезал на футер
+  padding-bottom: 40px; // Чтоб текст не налезал на футер
 }
 
 
 .main-content {
-  padding-top: 86px;   // чтобы контент не заезжал под header
+  padding-top: 26px;   // чтобы контент не заезжал под header
   padding-bottom: 70px; // чтобы контент не заезжал под bottom nav
 }

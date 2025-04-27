@@ -10,7 +10,7 @@ const Header = () => {
       <div className="header__profile">
         <img src={profileImage} alt="Profile" className="profile-icon" />
         <div className="profile-info">
-          <div className="profile-name">Aloriusis K.</div>
+          <div className="profile-name">Aldoriusis K.</div>
           <div className="profile-stars">252 звёзд заработано</div>
         </div>
       </div>
