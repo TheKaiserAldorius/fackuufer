@@ -1,14 +1,12 @@
 import React from 'react';
 import './OnlineCasesBlock.scss';
-
-// Импортируем изображения
 import cakeImage from '../assets/iconitems/cake.png';
 import clownboxImage from '../assets/iconitems/clownbox.png';
 import eggImage from '../assets/iconitems/egg.png';
 import ringImage from '../assets/iconitems/ring.png';
 import topheadImage from '../assets/iconitems/tophead.png';
 
-// Массив с кейсами (для примера)
+// Массив с кейсами (для примера Дане)
 const caseImages = [
   eggImage,
   ringImage,
@@ -33,7 +31,7 @@ const OnlineCasesBlock = () => {
   return (
     <div className="online-cases-block">
       <div className="online-block">
-        <div className="online-number">3554</div> {/* Онлайн количество */}
+        <div className="online-number">3554</div> {/* Поменять на сервис потом!!! ЛЕХА!!! К САМОМУ СЕБЕ ОБРАЩАЮСЬ!!! */}
         <div className="online-text">Онлайн</div>
       </div>
 

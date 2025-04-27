@@ -1,11 +1,18 @@
 import React, { useState } from 'react';
 import './RatingPage.scss';
 
+// Лягушачьи иконки для топ-блока
+import Frog1 from '../assets/frogs/Frog1.png';
+import Frog2 from '../assets/frogs/Frog2.png';
+import Frog3 from '../assets/frogs/Frog3.png';
+import Frog4 from '../assets/frogs/Frog4.png';
+import Frog5 from '../assets/frogs/Frog5.png';
+
 const leaders = [
   { name: 'Omar Saris', stars: 97765, position: 1 },
   { name: 'Ryan Carder', stars: 67532, position: 2 },
   { name: 'Martin Levin', stars: 45421, position: 3 },
-  // ...можешь добавить ещё для списка
+  // ...можешь добавить ещё
 ];
 
 const RatingPage = () => {
@@ -34,21 +41,25 @@ const RatingPage = () => {
         <div className="first-second">
           <div className="second big-slot">
             <div className="position">2nd</div>
-            {/* Здесь будет изображение победителя */}
+            <img src={Frog2} alt="2nd Frog" className="slot-img" />
           </div>
           <div className="first big-slot">
             <div className="position">1st</div>
+            <img src={Frog1} alt="1st Frog" className="slot-img" />
           </div>
         </div>
         <div className="others">
-          <div className="third small-slot">
+          <div className="third">
             <div className="position">3rd</div>
+            <img src={Frog3} alt="3rd Frog" className="slot-img" />
           </div>
           <div className="small-slot">
             <div className="position">4-10</div>
+            <img src={Frog4} alt="4-10 Frog" className="slot-img" />
           </div>
           <div className="small-slot">
             <div className="position">11-20</div>
+            <img src={Frog5} alt="11-20 Frog" className="slot-img" />
           </div>
         </div>
       </div>

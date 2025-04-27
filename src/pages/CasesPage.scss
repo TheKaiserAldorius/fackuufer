@@ -1,5 +1,5 @@
 .cases-page {
-  padding: 86px 16px 76px;
+  padding: 16px 16px 76px;
   background-color: #1A1F26;
   min-height: 100vh;
   box-sizing: border-box;
@@ -27,7 +27,7 @@
 .case-footer {
   display: flex;
   align-items: center;
-  justify-content: center;  /* <-- Центрируем иконку и цену */
+  justify-content: center; 
   padding: 8px;
   background: rgba(0,0,0,0.6);
 

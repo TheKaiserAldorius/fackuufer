@@ -1,7 +1,5 @@
 import React from 'react';
 import './ProfilePage.scss';
-
-// Импортируем аватар пользователя и изображения подарков
 import profileImage from '../assets/iconitems/profile.png';
 import eggImage      from '../assets/iconitems/cake.png';      // для примера
 import ringImage     from '../assets/iconitems/ring.png';
@@ -17,7 +15,6 @@ const userGifts = [
 const ProfilePage = () => {
   return (
     <div className="profile-page">
-      {/* Блок профиля */}
       <div className="profile-header">
         <img src={profileImage} alt="Avatar" className="avatar" />
         <div className="profile-info">
@@ -26,7 +23,6 @@ const ProfilePage = () => {
         </div>
       </div>
 
-      {/* Список подарков */}
       <div className="gifts-list">
         {userGifts.map(gift => (
           <div key={gift.id} className="gift-item">
@@ -34,7 +30,6 @@ const ProfilePage = () => {
             <div className="gift-details">
   <div className="gift-id">{gift.id}</div>
   <div className="gift-stars">
-    {/* Заменяем символ ★ на картинку */}
     <img src={starIcon} alt="star" className="star-icon" />
     <span>{gift.stars}</span>
   </div>

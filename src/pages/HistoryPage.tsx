@@ -1,12 +1,9 @@
-import React from 'react';
 import './HistoryPage.scss';
 
-// Используем предыдущие иконки из iconitems
+//иконки и доп материалы из iconitems
 import giftReceivedIcon  from '../assets/iconitems/cake.png';      // подарок получен
 import depositIcon       from '../assets/iconitems/ring.png';      // пополнение
 import giftExchangedIcon from '../assets/iconitems/clownbox.png';  // подарок обменян
-
-// Новая иконка звезды
 import starIcon from '../assets/buttonsicons/StarTg.png';
 
 const historyItems = [
@@ -35,10 +32,8 @@ const historyItems = [
 
 const HistoryPage = () => (
   <div className="history-page">
-    {/* Заголовок */}
     <div className="history-header">
       <div className="history-icon-circle">
-        {/* Можно оставить любую иконку здесь */}
         <img src={giftReceivedIcon} alt="История" />
       </div>
       <div className="history-titles">

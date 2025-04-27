@@ -1,7 +1,6 @@
-// src/main.tsx
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom"; // <-- ОДИН раз здесь
+import { BrowserRouter } from "react-router-dom"; // <-- ОДИН раз здесь - это импорт брауза, один раз для роутев(для бро)
 import App from "./App";
 import "./index.scss";
 
