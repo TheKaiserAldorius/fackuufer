@@ -1,17 +1,22 @@
-
 import { useLocation, useNavigate } from "react-router-dom";
-import { Home, Trophy, User, ScrollText } from "lucide-react";
 import "./BottomNavigation.scss";
+
+// Импортируем иконки
+import iconMainGiftPage from "../assets/navitems/iconmaingiftpage.png";
+import iconRatingPage from "../assets/navitems/iconreitingpage.png";
+import iconProfilePage from "../assets/navitems/iconprofilepage.png";
+import iconHistoryPage from "../assets/navitems/iconhistorypage.png";
 
 const BottomNavigation = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  // Массив с навигационными элементами
   const navItems = [
-    { path: "/", label: "Главное", icon: <Home size={24} /> },
-    { path: "/rating", label: "Рейтинг", icon: <Trophy size={24} /> },
-    { path: "/profile", label: "Профиль", icon: <User size={24} /> },
-    { path: "/history", label: "История", icon: <ScrollText size={24} /> },
+    { path: "/", label: "Главное", icon: iconMainGiftPage },
+    { path: "/rating", label: "Рейтинг", icon: iconRatingPage },
+    { path: "/profile", label: "Профиль", icon: iconProfilePage },
+    { path: "/history", label: "История", icon: iconHistoryPage },
   ];
 
   return (
@@ -22,7 +27,7 @@ const BottomNavigation = () => {
           onClick={() => navigate(item.path)}
           className={location.pathname === item.path ? "active" : ""}
         >
-          {item.icon}
+          <img src={item.icon} alt={item.label} className="nav-icon" />
           <span>{item.label}</span>
         </button>
       ))}

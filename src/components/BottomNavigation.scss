@@ -4,11 +4,11 @@
   left: 0;
   right: 0;
   height: 60px;
-  background: #ffffff;
+  background: #20272F;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid #4C5B6C;
   z-index: 1000;
 
   button {
@@ -17,11 +17,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #888;
+    color: #4C5B6C;
     font-size: 12px;
+    padding: 0;
+
+    /* Уменьшаем размер кнопок */
+    img {
+      width: 25px;
+      height: 25px;
+    }
 
     &.active {
-      color: #000;
+      color: #69AFFF;
+      
+      /* Для активного состояния меняем цвет самой иконки */
+      img {
+        filter: brightness(0) saturate(100%) invert(46%) sepia(99%) saturate(3457%) hue-rotate(173deg) brightness(103%) contrast(102%);
+      }
     }
   }
 }

@@ -1,7 +1,10 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react-swc'; // SWC для супер-быстрой сборки
 
-// https://vite.dev/config/
+
+
 export default defineConfig({
-  plugins: [react()],
-})
+  server: {
+    allowedHosts: ['73f5-20-61-126-210.ngrok-free.app', 'localhost', '127.0.0.1']
+  }
+});

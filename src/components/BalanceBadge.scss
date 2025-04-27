@@ -1,14 +1,14 @@
 .balance-badge {
     display: flex;
     align-items: center;
-    background-color: var(--tg-theme-bg-color, #fff);
+    background-color: #20272F;
     padding: 6px 12px;
     border-radius: 16px;
     border: 1px solid var(--tg-theme-hint-color, #ccc);
     font-weight: bold;
     font-size: 14px;
     gap: 8px;
-    color: var(--tg-theme-text-color, #000);
+    color: var(--tg-theme-text-color, #4C5B6C);
   
     &__amount {
       white-space: nowrap;

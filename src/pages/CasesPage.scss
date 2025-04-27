@@ -1,0 +1,77 @@
+.cases-page {
+    padding: 86px 16px 76px; 
+    /* 56px header + 30px отступ под хедером (можно скорректировать) */
+    background-color: #1A1F26;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+  
+  .cases-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  .case-card {
+    background-color: #2B313A;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 220px; /* можно подогнать под макет */
+  }
+  
+  .case-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    
+    .case-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #FFFFFF;
+    }
+    
+    .case-badge {
+      font-size: 10px;
+      padding: 2px 6px;
+      background-color: #69AFFF;
+      color: #20272F;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+  }
+  
+  .case-image-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .case-image {
+      max-width: 80%;
+      max-height: 80%;
+      object-fit: contain;
+    }
+  }
+  
+  .case-footer {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    background-color: #20272F;
+    
+    .case-star-icon {
+      width: 16px;
+      height: 16px;
+      margin-right: 4px;
+    }
+    
+    .case-price {
+      font-size: 14px;
+      font-weight: 600;
+      color: #FFFFFF;
+    }
+  }
+  
